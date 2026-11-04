@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #161C1E;
+  --color-slate-base: #13181A;
+  --color-charcoal: #1E2729;
+  --color-card: #1A2224;
+  --color-alabaster: #F4F1EA;
+  --color-gold: #B8956F;
+  --color-gold-hover: #CFA77E;
+  --color-gold-highlight: #9E8363;
+  --color-gold-light: rgba(184, 149, 111, 0.12);
+  --color-gold-glow: rgba(184, 149, 111, 0.25);
+  
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #161C1E;
+  --foreground: #F4F1EA;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #B8956F #161C1E;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #141A1C;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8956F;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CFA77E;
+}
+
+/* Editorial Glass & Surface Panels */
+.glass-panel {
+  background: rgba(26, 34, 36, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 149, 111, 0.14);
+}
+
+.card-editorial {
+  background-color: #1A2224;
+  border: 1px solid rgba(184, 149, 111, 0.12);
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-editorial:hover {
+  border-color: rgba(184, 149, 111, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Subtle Shimmer */
+.shimmer-text {
+  background: linear-gradient(to right, #F4F1EA 20%, #B8956F 50%, #F4F1EA 80%);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
