@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Download, FileText, Sparkles, Filter, Check, Search, PhoneCall } from "lucide-react";
 import LuxuryLogo from "@/components/luxury-logo";
+import { getAssetPath } from "@/lib/basePath";
 
 const catalogItems = [
   // Toilets
@@ -98,7 +99,7 @@ export default function BulkCatalogPage() {
       setDownloading(false);
       setDownloaded(true);
       const link = document.createElement("a");
-      link.href = "/NEW ALL ODELL DOC_X3_CTC-1.pdf";
+      link.href = getAssetPath("/NEW ALL ODELL DOC_X3_CTC-1.pdf");
       link.download = "ODELL_Master_Catalog.pdf";
       document.body.appendChild(link);
       link.click();

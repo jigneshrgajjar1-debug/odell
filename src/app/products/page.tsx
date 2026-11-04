@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, Download, Search, SlidersHorizontal, Layers, FileText } from "lucide-react";
 import LuxuryLogo from "@/components/luxury-logo";
 import BybangInteractiveGallery, { galleryProducts, GalleryProduct } from "@/components/bybang-interactive-gallery";
+import { getAssetPath } from "@/lib/basePath";
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -39,7 +40,7 @@ export default function ProductsPage() {
 
           <div className="flex items-center gap-4">
             <a
-              href="/NEW ALL ODELL DOC_X3_CTC-1.pdf"
+              href={getAssetPath("/NEW ALL ODELL DOC_X3_CTC-1.pdf")}
               download="ODELL_Master_Catalog.pdf"
               className="bg-[#B8956F] hover:bg-[#CFA77E] text-[#161C1E] font-serif font-bold text-xs uppercase tracking-widest px-4 py-2.5 rounded-lg flex items-center gap-2 transition-all shadow-md"
             >
@@ -107,7 +108,7 @@ export default function ProductsPage() {
               <div className="w-full h-48 bg-[#13181A] rounded-xl p-3 flex items-center justify-center overflow-hidden mb-4">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={prod.img}
+                  src={getAssetPath(prod.img)}
                   alt={prod.name}
                   className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                 />

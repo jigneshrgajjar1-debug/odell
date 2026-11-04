@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Sparkles, SlidersHorizontal, Eye } from "lucide-react";
 import LuxuryLogo from "@/components/luxury-logo";
+import { getAssetPath } from "@/lib/basePath";
 
 const galleryProducts = [
   { id: 1, name: "KANTO Tabletop Basin", cat: "Sanitaryware", size: "390x390x135mm", style: "Table Top", image: "/images/bathroom_b.png", desc: "Fine-walled rounded ceramic table top basin with a silky matte finish." },
@@ -78,7 +79,7 @@ export default function GalleryPage() {
               <div className="relative aspect-[4/3] bg-black/40 overflow-hidden border-b border-gold/5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={prod.image}
+                  src={getAssetPath(prod.image)}
                   alt={prod.name}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />

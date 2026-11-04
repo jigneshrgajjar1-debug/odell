@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/basePath";
 import { Sparkles, Check, DollarSign, FileText, Send, Info } from "lucide-react";
 
 interface WallOption {
@@ -70,7 +71,7 @@ export default function MaterialConfigurator() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={activeWall.image}
+                src={getAssetPath(activeWall.image)}
                 alt={activeWall.name}
                 className="w-full h-full object-cover brightness-[0.7] contrast-[1.05]"
               />

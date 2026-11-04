@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RotateCw, Sparkles, X, ShoppingBag } from "lucide-react";
+import { getAssetPath } from "@/lib/basePath";
 
 interface Hotspot {
   id: string;
@@ -71,7 +72,7 @@ export default function RoomPan() {
   const [activeHotspot, setActiveHotspot] = useState<Hotspot | null>(null);
 
   const activeHotspots = angle === "A" ? hotspotsA : hotspotsB;
-  const currentImage = angle === "A" ? "/images/bathroom_a.png" : "/images/bathroom_b.png";
+  const currentImage = angle === "A" ? getAssetPath("/images/bathroom_a.png") : getAssetPath("/images/bathroom_b.png");
 
   const handleRotate = () => {
     setIsRotating(true);

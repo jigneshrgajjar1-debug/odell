@@ -4,6 +4,7 @@ import React, { useRef, useEffect, useState, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, Download, Sparkles, Check, MoveHorizontal } from "lucide-react";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/basePath";
 
 export interface GalleryProduct {
   id: string;
@@ -643,7 +644,7 @@ export default function BybangInteractiveGallery({
             <div className="w-full h-full flex items-center justify-center p-2 bg-[#13181A]/60 rounded-xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={prod.img}
+                src={getAssetPath(prod.img)}
                 alt={prod.name}
                 className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500"
               />
@@ -686,7 +687,7 @@ export default function BybangInteractiveGallery({
             <div className="w-full h-full flex items-center justify-center p-2 bg-[#13181A]/60 rounded-xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={prod.img}
+                src={getAssetPath(prod.img)}
                 alt={prod.name}
                 className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500"
               />
@@ -728,7 +729,7 @@ export default function BybangInteractiveGallery({
             <div className="w-full h-full flex items-center justify-center p-2 bg-[#13181A]/60 rounded-xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={prod.img}
+                src={getAssetPath(prod.img)}
                 alt={prod.name}
                 className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-105 transition-transform duration-500"
               />
@@ -789,7 +790,7 @@ export default function BybangInteractiveGallery({
               <div className="w-full h-56 bg-[#13181A] rounded-2xl my-6 flex items-center justify-center p-4 border border-[#B8956F]/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={activeModalProduct.img}
+                  src={getAssetPath(activeModalProduct.img)}
                   alt={activeModalProduct.name}
                   className="max-h-full max-w-full object-contain filter drop-shadow-2xl"
                 />
@@ -817,7 +818,7 @@ export default function BybangInteractiveGallery({
                   Inquire on WhatsApp
                 </a>
                 <a
-                  href="/NEW ALL ODELL DOC_X3_CTC-1.pdf"
+                  href={getAssetPath("/NEW ALL ODELL DOC_X3_CTC-1.pdf")}
                   download="ODELL_Master_Catalog.pdf"
                   className="border border-[#B8956F]/30 hover:bg-[#B8956F]/10 text-[#B8956F] text-xs font-serif px-4 py-3 rounded-xl flex items-center justify-center gap-1.5 transition-colors"
                 >

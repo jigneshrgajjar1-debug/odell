@@ -27,6 +27,7 @@ import RoomPan from "@/components/room-pan";
 import ShowroomScheduler from "@/components/showroom-scheduler";
 import MaterialConfigurator from "@/components/material-configurator";
 import BybangInteractiveGallery from "@/components/bybang-interactive-gallery";
+import { getAssetPath } from "@/lib/basePath";
 
 // Master search database containing all products from the PDF
 interface SearchProduct {
@@ -210,7 +211,7 @@ export default function Home() {
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0 scale-105">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/editorial/hero_dark_suite.jpg"
+            src={getAssetPath("/images/editorial/hero_dark_suite.jpg")}
             alt="ODELL Ultra-Modern Dark Glass and Matte Black Luxury Suite"
             className="w-full h-full object-cover filter brightness-[0.78] contrast-[1.04]"
           />
@@ -266,7 +267,7 @@ export default function Home() {
 
             <div className="pt-2">
               <a
-                href="/NEW ALL ODELL DOC_X3_CTC-1.pdf"
+                href={getAssetPath("/NEW ALL ODELL DOC_X3_CTC-1.pdf")}
                 download="ODELL_Master_Catalog.pdf"
                 className="inline-flex items-center gap-2 text-xs font-serif tracking-widest text-[#B8956F] hover:text-white uppercase transition-colors"
                 data-cursor="CATALOG"
@@ -282,7 +283,7 @@ export default function Home() {
             <div className="relative rounded-2xl overflow-hidden border border-[#B8956F]/20 shadow-2xl bg-[#13181A] group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/story_vanity_editorial.png"
+                src={getAssetPath("/images/editorial/story_vanity_editorial.png")}
                 alt="ODELL Editorial Vanity Sanctuary"
                 className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-700"
               />
@@ -338,7 +339,7 @@ export default function Home() {
             <div className="w-full h-48 sm:h-56 overflow-hidden bg-[#13181A]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/cat_water_closets.png"
+                src={getAssetPath("/images/editorial/cat_water_closets.png")}
                 alt="Water Closets"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -365,7 +366,7 @@ export default function Home() {
             <div className="w-full h-48 sm:h-56 overflow-hidden bg-[#13181A]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/cat_designer_basins.png"
+                src={getAssetPath("/images/editorial/cat_designer_basins.png")}
                 alt="Designer Wash Basins"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -392,7 +393,7 @@ export default function Home() {
             <div className="w-full h-48 sm:h-56 overflow-hidden bg-[#13181A]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/cat_luxury_faucets.png"
+                src={getAssetPath("/images/editorial/cat_luxury_faucets.png")}
                 alt="Luxury Faucets & Showers"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -419,7 +420,7 @@ export default function Home() {
             <div className="w-full h-48 sm:h-56 overflow-hidden bg-[#13181A]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/cat_led_mirrors.png"
+                src={getAssetPath("/images/editorial/cat_led_mirrors.png")}
                 alt="LED Mirrors"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -480,7 +481,7 @@ export default function Home() {
             <div className="w-full h-64 sm:h-80 overflow-hidden bg-[#13181A] relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/space_residential.png"
+                src={getAssetPath("/images/editorial/space_residential.png")}
                 alt="Residential Bathroom Sanctuary"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -508,7 +509,7 @@ export default function Home() {
             <div className="w-full h-64 sm:h-80 overflow-hidden bg-[#13181A] relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/editorial/space_commercial.png"
+                src={getAssetPath("/images/editorial/space_commercial.png")}
                 alt="Commercial and Hospitality Suite"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -658,7 +659,7 @@ export default function Home() {
               </p>
             </div>
             <a
-              href="/NEW ALL ODELL DOC_X3_CTC-1.pdf"
+              href={getAssetPath("/NEW ALL ODELL DOC_X3_CTC-1.pdf")}
               download="ODELL_Master_Catalog.pdf"
               className="text-[10px] text-[#B8956F] font-serif uppercase tracking-wider mt-4 hover:underline flex items-center gap-1 font-bold"
             >
